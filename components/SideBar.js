@@ -43,13 +43,13 @@ const SideBar = () => {
           <div className="trm-divider trm-mb-40 trm-mt-40" />
           {/* sidebar social */}
           <div className="trm-social">
-            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <a href="https://www.instagram.com/muhaddis4521/ " target="_blank" rel="noopener noreferrer" aria-label="Instagram">
               <i className="fab fa-instagram" />
             </a>
-            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <a href="https://web.facebook.com/muhammad.muhaddis.524 " target="_blank" rel="noopener noreferrer" aria-label="Facebook">
               <i className="fab fa-facebook-f" />
             </a>
-            <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <a href="https://www.linkedin.com/in/muhammad-muhaddis-a023b4372/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
               <i className="fab fa-linkedin-in" />
             </a>
           </div>

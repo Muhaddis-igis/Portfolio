@@ -48,7 +48,7 @@ const History = () => {
                 <div className="trm-left-side">
                   <h6 className="trm-mb-15">Sustainable Innovation Award</h6>
                   <div className="trm-text-sm trm-accent-color trm-mb-15">
-                    <i>AP NIUST Certification</i>
+                    <i>AP NUST Certification</i>
                   </div>
                 </div>
               </div>
