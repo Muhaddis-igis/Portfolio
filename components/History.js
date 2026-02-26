@@ -4,12 +4,13 @@ const History = () => {
       <div className="col-lg-12">
         {/* title */}
         <h5 className="trm-mb-40 trm-title-with-divider">
-          Employment History <span data-number={7} />
+          Career &amp; Milestones <span data-number={9} />
         </h5>
       </div>
       <div className="col-lg-6">
         {/* timeline */}
         <div className="trm-timeline">
+          {/* DIV 1 */}
           <div
             className="trm-timeline-item trm-scroll-animation trm-active-el"
             data-scroll
@@ -20,27 +21,21 @@ const History = () => {
             <div className="trm-a trm-timeline-content">
               <div className="trm-card-header">
                 <div className="trm-left-side">
-                  <h6 className="trm-mb-15">Toronto Art School</h6>
+                  <h6 className="trm-mb-15">Natural Fiber Company</h6>
                   <div className="trm-text-sm trm-accent-color trm-mb-15">
-                    <i>jan 2018 - may 2020</i>
+                    <i>Assistant Marketing Manager &bull; April 2025 &ndash; November 2025</i>
                   </div>
                 </div>
               </div>
-              <div className="trm-mb-20">
-                Dolor sit amet, consectetur adipisicing elit. Iusto, optio,
-                dolorum provident rerum aut hic quasi placeat iure tempora
-                laudantium ipsa ad debitis unde. Quasi placeat. Iste
-                voluptatibus minus veritatis qui ut.
+              <div>
+                Led marketing campaigns, contributed to brand positioning
+                strategies, and supported business development initiatives in a
+                competitive industry. Collaborated cross-functionally to drive
+                brand awareness and optimize customer engagement channels.
               </div>
-              <a
-                data-fancybox
-                href="files/diploma.jpg"
-                className="trm-label trm-label-color"
-              >
-                Diploma <i className="fas fa-arrow-right" />
-              </a>
             </div>
           </div>
+          {/* DIV 2 */}
           <div
             className="trm-timeline-item trm-scroll-animation trm-active-el"
             data-scroll
@@ -51,24 +46,42 @@ const History = () => {
             <div className="trm-a trm-timeline-content">
               <div className="trm-card-header">
                 <div className="trm-left-side">
-                  <h6 className="trm-mb-15">Designe Academy</h6>
+                  <h6 className="trm-mb-15">Sustainable Innovation Award</h6>
                   <div className="trm-text-sm trm-accent-color trm-mb-15">
-                    <i>jan 2018 - may 2020</i>
+                    <i>AP NIUST Certification</i>
                   </div>
                 </div>
               </div>
-              <div className="trm-mb-20">
-                Dolorum tempora provident rerum aut hic quasi placeat iure
-                tempora timeline de laudantium ipsa ad debitis unde quasi
-                placeat Iste voluptatibus minus veritatis qui ut.
+              <div>
+                Recognized as an award winner in Sustainable Innovation at AP
+                NIUST for contributing innovative and sustainable ideas toward
+                environmental responsibility and modern business solutions.
               </div>
-              <a
-                data-fancybox
-                href="files/diploma.jpg"
-                className="trm-label trm-label-color"
-              >
-                Diploma <i className="fas fa-arrow-right" />
-              </a>
+            </div>
+          </div>
+          {/* DIV 3 */}
+          <div
+            className="trm-timeline-item trm-scroll-animation trm-active-el"
+            data-scroll
+            data-scroll-offset={40}
+          >
+            <div className="trm-timeline-mark-light" />
+            <div className="trm-timeline-mark" />
+            <div className="trm-a trm-timeline-content">
+              <div className="trm-card-header">
+                <div className="trm-left-side">
+                  <h6 className="trm-mb-15">NUST Admission &ndash; GIS Program</h6>
+                  <div className="trm-text-sm trm-accent-color trm-mb-15">
+                    <i>Academic Milestone</i>
+                  </div>
+                </div>
+              </div>
+              <div>
+                Admitted to the Geographic Information Systems (GIS) program at
+                NUST, developing analytical skills in spatial data analysis and
+                technology-driven problem solving. Bridging geospatial
+                intelligence with modern web technologies.
+              </div>
             </div>
           </div>
         </div>
@@ -76,6 +89,7 @@ const History = () => {
       </div>
       <div className="col-lg-6">
         <div className="trm-timeline">
+          {/* DIV 4 */}
           <div
             className="trm-timeline-item trm-scroll-animation trm-active-el"
             data-scroll
@@ -86,18 +100,21 @@ const History = () => {
             <div className="trm-a trm-timeline-content">
               <div className="trm-card-header">
                 <div className="trm-left-side">
-                  <h6 className="trm-mb-15">Graphic Designer</h6>
+                  <h6 className="trm-mb-15">Makers Go Online</h6>
                   <div className="trm-text-sm trm-accent-color trm-mb-15">
-                    <i>jan 2018 - may 2020</i>
+                    <i>Freelance Web Developer &bull; November 2025 &ndash; Present</i>
                   </div>
                 </div>
               </div>
               <div>
-                Dolorum provident rerum aut hic quasi placeat iure tempora
-                laudantium ipsa ad debitis unde.
+                Developing modern web applications, responsive websites, backend
+                APIs with Express.js and MongoDB, and scalable solutions for
+                diverse clients. Focused on performance, clean code, and
+                delivering production-ready digital products.
               </div>
             </div>
           </div>
+          {/* DIV 5 */}
           <div
             className="trm-timeline-item trm-scroll-animation trm-active-el"
             data-scroll
@@ -108,35 +125,18 @@ const History = () => {
             <div className="trm-a trm-timeline-content">
               <div className="trm-card-header">
                 <div className="trm-left-side">
-                  <h6 className="trm-mb-15">UI/UX Designer</h6>
+                  <h6 className="trm-mb-15">Continuous Learning &amp; Growth</h6>
                   <div className="trm-text-sm trm-accent-color trm-mb-15">
-                    <i>jan 2018 - may 2020</i>
+                    <i>Independent Projects &bull; 2025 &ndash; Ongoing</i>
                   </div>
                 </div>
               </div>
               <div>
-                Iusto quasi placeat iure tempora laudantium ipsa ad debitis
-                unde.
+                Actively expanding expertise through independent projects in
+                full-stack development, exploring new frameworks and
+                technologies, contributing to open-source, and building personal
+                tools that solve real-world problems.
               </div>
-            </div>
-          </div>
-          <div
-            className="trm-timeline-item trm-scroll-animation trm-active-el"
-            data-scroll
-            data-scroll-offset={40}
-          >
-            <div className="trm-timeline-mark-light" />
-            <div className="trm-timeline-mark" />
-            <div className="trm-a trm-timeline-content">
-              <div className="trm-card-header">
-                <div className="trm-left-side">
-                  <h6 className="trm-mb-15">UI/UX Designer, Web Developer</h6>
-                  <div className="trm-text-sm trm-accent-color trm-mb-15">
-                    <i>jan 2018 - may 2020</i>
-                  </div>
-                </div>
-              </div>
-              <div>Dolorum provident rerum aut hic quasi placeat iure</div>
             </div>
           </div>
         </div>

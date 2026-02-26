@@ -8,7 +8,7 @@ import VideoPopup from "@/components/VideoPopup";
 import { trueManUtility } from "@/utility";
 import { Fancybox } from "@fancyapps/ui";
 import { Fragment, useEffect } from "react";
-const TrueManLayout = ({ children, noSidebar, onePage }) => {
+const TrueManLayout = ({ children, noSidebar }) => {
   useEffect(() => {
     trueManUtility.scrollAnimation();
   }, []);
@@ -29,7 +29,7 @@ const TrueManLayout = ({ children, noSidebar, onePage }) => {
       {/* scroll container */}
       <div data-scroll-section="" id="content" className="trm-scroll-section">
         {/* top bar */}
-        <TopBar onePage={onePage} />
+        <TopBar />
         {/* top bar end */}
         <div className="trm-content-start">
           {/* banner */}
