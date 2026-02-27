@@ -46,10 +46,10 @@ const projectsData = [
     desc: "Devcon Hackathon Project",
     details: {
       type: "Web Application",
-      languages: ["Next.js", "Supabase", "PostgreSQL"],
+      languages: ["Next.js", "Supabase"],
       platform: "Custom (Built with Code)",
       country: "Pakistan",
-      liveUrl: "https://hospital-or-managment-app.vercel.app/dashboard",
+      liveUrl: "https://hospital-or-managment-app.vercel.app",
     },
   },
   {
@@ -59,7 +59,7 @@ const projectsData = [
     desc: "Portfolio Website for an academy in lahore",
     details: {
       type: "Web Application",
-      languages: ["React", "Node.js", "PostgreSQL"],
+      languages: ["React", "CSS", "JavaScript"],
       platform: "Custom (Built with Code)",
       country: "Pakistan",
       liveUrl: "https://www.strivestaracademy.com",

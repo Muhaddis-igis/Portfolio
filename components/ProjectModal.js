@@ -1,23 +1,33 @@
 "use client";
-import { useCallback, useEffect, useRef } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 
 const ProjectModal = ({ project, onClose }) => {
   const overlayRef = useRef(null);
   const closeRef = useRef(null);
+  const [mounted, setMounted] = useState(false);
 
-  // Close on Escape key
+  // Only portal after mount (avoids SSR mismatch)
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  // Close on Escape key + lock body scroll
   useEffect(() => {
     const handleKeyDown = (e) => {
       if (e.key === "Escape") onClose();
     };
     document.addEventListener("keydown", handleKeyDown);
-    // Prevent body scroll while modal is open
+    // Lock scroll on body AND the locomotive scroll container
     document.body.style.overflow = "hidden";
+    const scrollContainer = document.getElementById("trm-scroll-container");
+    if (scrollContainer) scrollContainer.style.pointerEvents = "none";
     // Focus close button on open
     if (closeRef.current) closeRef.current.focus();
     return () => {
       document.removeEventListener("keydown", handleKeyDown);
       document.body.style.overflow = "";
+      if (scrollContainer) scrollContainer.style.pointerEvents = "";
     };
   }, [onClose]);
 
@@ -29,11 +39,11 @@ const ProjectModal = ({ project, onClose }) => {
     [onClose]
   );
 
-  if (!project) return null;
+  if (!project || !mounted) return null;
 
   const { title, desc, details } = project;
 
-  return (
+  const modalJSX = (
     <div
       className="trm-modal-overlay"
       ref={overlayRef}
@@ -117,6 +127,10 @@ const ProjectModal = ({ project, onClose }) => {
       </div>
     </div>
   );
+
+  // Portal to document.body so position:fixed is relative to the viewport,
+  // not the Locomotive Scroll transform container.
+  return createPortal(modalJSX, document.body);
 };
 
 export default ProjectModal;

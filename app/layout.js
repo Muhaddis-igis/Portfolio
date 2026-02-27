@@ -10,17 +10,17 @@ import "./globals.css";
 import State from "/context/context";
 
 export const metadata = {
-  title: "Muhammad Muhaddis | Web Developer & Marketing Strategist",
+  title: "Muhammad Muhaddis | Frontend Web Developer Portfolio",
   description:
-    "Muhammad Muhaddis — Freelance Web Developer, Marketing Strategist, and GIS Student based in Islamabad, Pakistan. Building modern, responsive, and scalable web solutions.",
+    "Muhammad Muhaddis is a frontend web developer specializing in modern, responsive, and scalable web applications using React and Next.js.",
   keywords:
-    "Muhammad Muhaddis, Web Developer, Freelance Developer, Next.js, React, Islamabad, Pakistan, Marketing Strategist, GIS Student, Full Stack Developer",
+    "Muhammad Muhaddis, Frontend Developer, Web Developer, Freelance Developer, Next.js, React, HTML, CSS, JavaScript, Islamabad, Pakistan, Muhammad Muhaddis Portfolio",
   authors: [{ name: "Muhammad Muhaddis" }],
   creator: "Muhammad Muhaddis",
   openGraph: {
-    title: "Muhammad Muhaddis | Web Developer & Marketing Strategist",
+    title: "Muhammad Muhaddis | Frontend Web Developer Portfolio",
     description:
-      "Freelance Web Developer building modern, responsive, and scalable web solutions. Based in Islamabad, Pakistan.",
+      "Muhammad Muhaddis is a frontend web developer specializing in React and Next.js. Based in Islamabad, Pakistan.",
     url: "https://muhammadmuhaddis.com",
     siteName: "Muhammad Muhaddis Portfolio",
     locale: "en_US",
@@ -28,9 +28,9 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Muhammad Muhaddis | Web Developer & Marketing Strategist",
+    title: "Muhammad Muhaddis | Frontend Web Developer Portfolio",
     description:
-      "Freelance Web Developer building modern, responsive, and scalable web solutions.",
+      "Frontend web developer specializing in React and Next.js. Building modern, responsive web applications.",
   },
   robots: {
     index: true,
@@ -46,6 +46,7 @@ export default function RootLayout({ children }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#ffffff" />
         <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="canonical" href="https://muhammadmuhaddis.com" />
       </head>
       <State>
         <TrueManModeCss />

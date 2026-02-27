@@ -4,7 +4,6 @@ const Skills = () => {
     <Fragment>
       <LanguageSkills />
       <FrontendSkills />
-      <BackendSkills />
       <ToolsSkills />
     </Fragment>
   );
@@ -132,69 +131,13 @@ const FrontendSkills = () => {
   );
 };
 
-const BackendSkills = () => {
-  return (
-    <div className="row">
-      <div className="col-lg-12">
-        <h5 className="trm-mb-40 trm-title-with-divider">
-          Backend
-          <span data-number={7} />
-        </h5>
-      </div>
-      <div className="col-lg-6">
-        <div
-          className="trm-skill-card trm-scroll-animation trm-active-el"
-          data-scroll
-          data-scroll-offset={40}
-        >
-          <div className="trm-mb-40">
-            <div className="trm-skill-header">
-              <h6 className="trm-mb-15">Express.js</h6>
-              <span className="trm-label trm-label-light">75%</span>
-            </div>
-            <div className="trm-progressbar-frame">
-              <div className="trm-progressbar p70" />
-            </div>
-          </div>
-          <div>
-            <div className="trm-skill-header">
-              <h6 className="trm-mb-15">MongoDB</h6>
-              <span className="trm-label trm-label-light">70%</span>
-            </div>
-            <div className="trm-progressbar-frame">
-              <div className="trm-progressbar p70" />
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="col-lg-6">
-        <div
-          className="trm-skill-card trm-scroll-animation trm-active-el"
-          data-scroll
-          data-scroll-offset={40}
-        >
-          <div>
-            <div className="trm-skill-header">
-              <h6 className="trm-mb-15">PostgreSQL</h6>
-              <span className="trm-label trm-label-light">65%</span>
-            </div>
-            <div className="trm-progressbar-frame">
-              <div className="trm-progressbar p60" />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
-
 const ToolsSkills = () => {
   return (
     <div className="row">
       <div className="col-lg-12">
         <h5 className="trm-mb-40 trm-title-with-divider">
           Tools &amp; Version Control
-          <span data-number={8} />
+          <span data-number={7} />
         </h5>
       </div>
       <div className="col-lg-6">

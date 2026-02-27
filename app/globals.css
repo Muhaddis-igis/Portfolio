@@ -554,11 +554,19 @@ img.mfp-img {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(0, 0, 0, 0.7);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
   animation: trm-modal-fade-in 0.3s ease;
   padding: 20px;
+}
+
+/* Greyscale blurred backdrop — sits behind the modal, not affecting it */
+.trm-modal-overlay::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(4px) grayscale(1);
+  -webkit-backdrop-filter: blur(4px) grayscale(1);
 }
 
 @keyframes trm-modal-fade-in {
@@ -574,11 +582,16 @@ img.mfp-img {
   position: relative;
   max-width: 520px;
   width: 100%;
-  background: var(--trm-card-bg, #fff);
+  /* Explicit colors — never inherit dark theme variables */
+  background: #ffffff;
+  color: #1a1a2e;
   border-radius: 12px;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.45);
   animation: trm-modal-slide-up 0.35s ease;
   overflow: hidden;
+  /* Isolate from any parent filter/stacking context */
+  isolation: isolate;
+  filter: none !important;
 }
 
 @keyframes trm-modal-slide-up {
@@ -653,8 +666,48 @@ img.mfp-img {
 
 /* Dark mode adjustments */
 .dark .trm-modal-container {
-  background: #1a1a2e;
-  color: #e0e0e0;
+  background: #1c1c2e;
+  color: #e8e8f0;
+}
+
+.trm-modal-container h4,
+.trm-modal-container h5,
+.trm-modal-container h6 {
+  color: inherit;
+}
+
+.trm-modal-container .trm-label {
+  color: #555;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.dark .trm-modal-container .trm-label {
+  color: #aab;
+}
+
+.trm-modal-container .trm-modal-tag {
+  background: rgba(78, 131, 255, 0.15);
+  color: #1e50b4;
+  font-weight: 600;
+}
+
+.dark .trm-modal-container .trm-modal-tag {
+  background: rgba(78, 131, 255, 0.25);
+  color: #7faaff;
+}
+
+.trm-modal-container .trm-accent-color {
+  color: #1e50b4 !important;
+}
+
+.trm-modal-container .trm-modal-close {
+  background: rgba(0, 0, 0, 0.07);
+  color: #333;
+}
+
+.trm-modal-container .trm-modal-close:hover {
+  background: rgba(0, 0, 0, 0.15);
 }
 
 .dark .trm-modal-close {

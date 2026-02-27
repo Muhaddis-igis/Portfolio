@@ -107,10 +107,10 @@ const History = () => {
                 </div>
               </div>
               <div>
-                Developing modern web applications, responsive websites, backend
-                APIs with Express.js and MongoDB, and scalable solutions for
-                diverse clients. Focused on performance, clean code, and
-                delivering production-ready digital products.
+                Developing modern, responsive websites and scalable frontend
+                solutions for diverse clients. Focused on performance, clean
+                code, and delivering production-ready digital products using
+                React and Next.js.
               </div>
             </div>
           </div>
@@ -132,10 +132,10 @@ const History = () => {
                 </div>
               </div>
               <div>
-                Actively expanding expertise through independent projects in
-                full-stack development, exploring new frameworks and
-                technologies, contributing to open-source, and building personal
-                tools that solve real-world problems.
+                Actively expanding expertise through independent frontend
+                projects, exploring new React and Next.js patterns, contributing
+                to open-source, and building personal tools that solve
+                real-world problems.
               </div>
             </div>
           </div>
