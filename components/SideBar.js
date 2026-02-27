@@ -21,10 +21,17 @@ const SideBar = () => {
           {/* card header */}
           <div className="trm-mc-header">
             <div className="trm-avatar-frame trm-mb-20">
-              <img className="trm-avatar" src="/img/avatar.jpg" alt="Avatar" />
+              <img
+                className="trm-avatar"
+                src="/img/avatar.jpg"
+                alt="Muhammad Muhaddis - Profile Photo"
+                loading="lazy"
+                width={120}
+                height={120}
+              />
               <div className="trm-dot" />
             </div>
-            <h5 className="trm-name trm-mb-15">Emma Trueman</h5>
+            <h5 className="trm-name trm-mb-15">Muhammad Muhaddis</h5>
             <div className="trm-label">
               I`m{" "}
               <span className="trm-typed-text">
@@ -36,17 +43,14 @@ const SideBar = () => {
           <div className="trm-divider trm-mb-40 trm-mt-40" />
           {/* sidebar social */}
           <div className="trm-social">
-            <a href="#." target="_blank">
+            <a href="https://www.instagram.com/muhaddis4521/ " target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <i className="fab fa-instagram" />
+            </a>
+            <a href="https://web.facebook.com/muhammad.muhaddis.524 " target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <i className="fab fa-facebook-f" />
+            </a>
+            <a href="https://www.linkedin.com/in/muhammad-muhaddis-a023b4372/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
               <i className="fab fa-linkedin-in" />
-            </a>
-            <a href="#." target="_blank">
-              <i className="fab fa-dribbble" />
-            </a>
-            <a href="#." target="_blank">
-              <i className="fab fa-behance" />
-            </a>
-            <a href="#." target="_blank">
-              <i className="fab fa-twitter" />
             </a>
           </div>
 
@@ -54,20 +58,17 @@ const SideBar = () => {
           <div className="trm-divider trm-mb-40 trm-mt-40" />
           {/* info */}
           <ul className="trm-table trm-mb-20">
-            {/* country */}
             <li>
               <div className="trm-label">Residence:</div>
-              <div className="trm-label trm-label-light">Canada</div>
+              <div className="trm-label trm-label-light">Pakistan</div>
             </li>
-            {/* city */}
             <li>
               <div className="trm-label">City:</div>
-              <div className="trm-label trm-label-light">Toronto</div>
+              <div className="trm-label trm-label-light">Islamabad</div>
             </li>
-            {/* age */}
             <li>
               <div className="trm-label">Age:</div>
-              <div className="trm-label trm-label-light">26</div>
+              <div className="trm-label trm-label-light">18</div>
             </li>
           </ul>
           {/* info end */}

@@ -1,5 +1,5 @@
 {
-  "name": "trueman-react",
+  "name": "muhaddis-portfolio",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -12,6 +12,7 @@
     "@fancyapps/ui": "^5.0.33",
     "locomotive-scroll": "^4.1.4",
     "next": "14.1.0",
+    "nodemailer": "^8.0.1",
     "react": "^18",
     "react-dom": "^18",
     "react-player": "^2.14.1",

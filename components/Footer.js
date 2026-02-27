@@ -10,12 +10,7 @@ const Footer = () => {
       </div>
       <div className="trm-label">
         Developed by:{" "}
-        <a
-          href="https://themeforest.net/user/bslthemes"
-          target="_blank"
-        >
-          BSLTHEMES
-        </a>
+        <span>Muhammad Muhaddis</span>
       </div>
     </footer>
   );

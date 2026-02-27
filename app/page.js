@@ -1,11 +1,10 @@
 "use client";
+import Contact from "@/components/Contact";
 import Counter from "@/components/Counter";
-import Price from "@/components/Price";
-import Publications from "@/components/Publications";
-import Services from "@/components/Services";
+import History from "@/components/History";
+import Projects from "@/components/Projects";
+import Skills from "@/components/Skills";
 import Story from "@/components/Story";
-import Testimonials from "@/components/Testimonials";
-import VideoResume from "@/components/VideoResume";
 import { context } from "@/context/context";
 import TrueManLayout from "@/layout/TrueManLayout";
 import { useContext, useEffect } from "react";
@@ -23,18 +22,39 @@ const Index = () => {
       {/* text */}
       <Story />
       {/* text end */}
-      {/* video resume */}
-      <VideoResume />
-      {/* video resume end */}
-      {/* services */}
-      <Services />
-      {/* services end */}
-      {/* price plans */}
-      <Price />
-      {/* price plans end */}
-      {/* testimonials */}
-      <Testimonials />
-      <Publications />
+      {/* portfolio section trigger */}
+      <div
+        data-scroll
+        data-scroll-repeat
+        data-scroll-offset={500}
+        id="portfolio-triger"
+      />
+      {/* projects */}
+      <Projects />
+      {/* projects end */}
+      {/* resume section trigger */}
+      <div
+        data-scroll
+        data-scroll-repeat
+        data-scroll-offset={500}
+        id="resume-triger"
+      />
+      {/* skills */}
+      <Skills />
+      {/* skills end */}
+      {/* history */}
+      <History />
+      {/* history end */}
+      {/* contact section trigger */}
+      <div
+        data-scroll
+        data-scroll-repeat
+        data-scroll-offset={500}
+        id="contact-triger"
+      />
+      {/* contact */}
+      <Contact />
+      {/* contact end */}
     </TrueManLayout>
   );
 };

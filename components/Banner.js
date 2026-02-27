@@ -1,7 +1,7 @@
 import { context } from "@/context/context";
 import { sliderProps } from "@/utility/sliderProps";
 import Link from "next/link";
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 const Banner = ({ centerTitle }) => {
@@ -34,6 +34,40 @@ const Banner = ({ centerTitle }) => {
 export default Banner;
 
 const Image = ({ banner_image }) => {
+  const [dynamicBg, setDynamicBg] = useState(null);
+  const [loaded, setLoaded] = useState(false);
+
+  useEffect(() => {
+    let cancelled = false;
+    const fetchBanner = async () => {
+      try {
+        const res = await fetch("/api/unsplash");
+        if (!res.ok) throw new Error("Failed to fetch");
+        const data = await res.json();
+        if (!cancelled && data.url) {
+          // Preload the image before showing
+          const img = new window.Image();
+          img.onload = () => {
+            if (!cancelled) {
+              setDynamicBg(data.url);
+              setLoaded(true);
+            }
+          };
+          img.onerror = () => {
+            if (!cancelled) setLoaded(true);
+          };
+          img.src = data.url;
+        }
+      } catch {
+        if (!cancelled) setLoaded(true);
+      }
+    };
+    fetchBanner();
+    return () => { cancelled = true; };
+  }, []);
+
+  const bgUrl = dynamicBg || banner_image;
+
   return (
     <div
       className="trm-banner"
@@ -41,14 +75,15 @@ const Image = ({ banner_image }) => {
       data-scroll-direction="vertical"
       data-scroll-speed={-1}
     >
-      {/* banner cover */}
-      <img
-        src={banner_image}
-        alt="banner"
-        className="trm-banner-cover"
+      {/* banner cover - dynamic Unsplash background */}
+      <div
+        className={`trm-banner-cover trm-dynamic-banner ${loaded ? "trm-banner-loaded" : ""}`}
+        style={{ backgroundImage: `url(${bgUrl})` }}
         data-scroll=""
         data-scroll-direction="vertical"
         data-scroll-speed={-4}
+        role="img"
+        aria-label="Professional tech background"
       />
       {/* banner cover end */}
 
@@ -65,18 +100,19 @@ const Image = ({ banner_image }) => {
             <div className="col-lg-8">
               {/* banner title */}
               <div className="trm-banner-text">
-                <div className="trm-label trm-mb-20">Hi my new friend!</div>
+                <div className="trm-label trm-mb-20">Hello, I&apos;m Muhammad Muhaddis!</div>
                 <h1 className="trm-mb-30">
-                  Discover my
+                  Welcome to
                   <br />
-                  art space!
+                  my portfolio!
                 </h1>
                 <a
-                  data-fancybox=""
-                  href="https://www.youtube.com/watch?v=Mo_vRjtkgSI"
+                  href="#about-triger"
+                  data-scroll-to="#about-triger"
+                  data-scroll-offset={-130}
                   className="trm-btn trm-btn-border"
                 >
-                  Video Resume <i className="fas fa-play" />
+                  Explore <i className="fas fa-arrow-down" />
                 </a>
               </div>
               {/* banner title end */}
